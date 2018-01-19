@@ -1,2 +1,2 @@
 # Mi_HomeWork
-Just Foe The HomeWork
+Just For The HomeWork
