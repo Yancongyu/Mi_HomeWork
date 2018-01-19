@@ -14,3 +14,7 @@ IFS的用法,按指定的分隔符去分割变量
 内置变变量,$REPLY接收用户输入,$SECONDS计算运行时间(s),$TMOUT设置一个超时时间,$RANDOM产生随机数(0-32767)
 -r设定只读变量,-i设定Integer,-a设定array
 shell从0开始计数,awk从1开始计数
+可以使用continue加数字的形式指定跳到哪层循环
+arch可输出硬件信息
+select可以提供菜单式选择,PS3可以设置提示语(默认#?),可以通过case判断输入是否在菜单里
+dirname和basename可以快速拆分一个带路径的文件,dirname/basename:路径/文件名
