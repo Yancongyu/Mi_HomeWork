@@ -12,10 +12,10 @@ b=${a/23/BB}把a中的23用BB替换,如果a之前是Integer,会转换成String;�
 运算符优先级,if [[ "$v1" -gt "$v2" ]] || [[ "$v1" -lt "$v2" ]] && [[ -e "$filename" ]](标准)(http://tldp.org/LDP/abs/html/opprecedence.html)
 IFS的用法,按指定的分隔符去分割变量
 内置变变量,$REPLY接收用户输入,$SECONDS计算运行时间(s),$TMOUT设置一个超时时间,$RANDOM产生随机数(0-32767)
--r设定只读变量,-i设定Integer,-a设定array
+declare -r设定只读变量,-i设定Integer,-a设定array
 shell从0开始计数,awk从1开始计数
 可以使用continue加数字的形式指定跳到哪层循环
-arch可输出硬件信息
+arch可输出硬件信息(用uname -m)
 select可以提供菜单式选择,PS3可以设置提示语(默认#?),可以通过case判断输入是否在菜单里
 dirname和basename可以快速拆分一个带路径的文件,dirname/basename:路径/文件名
 type可以用来显示指定命令类型
@@ -42,3 +42,8 @@ factor将整数分解为素数因子
 bc支持任意精度的计算
 dc支持无限精度的桌面计算器
 getopts,getopt可以进行参数的处理.(getopts一般情况下很好用,getopt比较复杂且强大)
+可以使用stty去设置特殊字符,比如stty erase '#' #号即删除键
+read -sp 可以实现读取数据而不显示用户输入
+stat查看文件细节
+alias可以临时代替某些命令(unalias可以取消),alias lll="ls -l",lll即ls -l
+数组初始化的几种方式,area[11]=23/area2=( zero one )/area3=([17]=seventeen [24]=twenty-four)(索引从0开始)
